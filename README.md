@@ -44,20 +44,10 @@ I care about clear interfaces, practical automation, and ideas that can actually
 | **AI Experiments** | Small prototypes around agents, automation, and structured reasoning | TypeScript, React |
 | **Product Notes** | Research notes, case studies, and product thinking | Markdown |
 
----
-
-## Build Mode
-
-<p align="center">
-  <img src="./assets/tetris-drop.svg" alt="animated falling blocks build board" width="100%" />
-</p>
-
----
-
 ## GitHub Activity
 
 <p align="center">
-  <img src="./assets/activity-grid.svg" alt="animated GitHub-style activity grid" width="100%" />
+  <img src="./assets/activity-grid.svg" alt="minimal animated falling blocks activity" width="100%" />
 </p>
 
 ---
