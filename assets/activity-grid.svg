@@ -1,6 +1,6 @@
 <svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Stacking blocks activity</title>
-  <desc id="desc">A minimal Tetris-style animation where each falling block lands, stays in place, stacks to the top, then clears and restarts.</desc>
+  <desc id="desc">A minimal Tetris-style animation where active pieces fall one at a time, stay on the board, fill seven rows, and then clear.</desc>
 
   <defs>
     <style>
@@ -15,6 +15,12 @@
     <pattern id="emptyCells" width="24" height="24" patternUnits="userSpaceOnUse">
       <rect x="3" y="3" width="18" height="18" rx="3" class="pale" stroke="#d7dde5" stroke-width="1"/>
     </pattern>
+    <pattern id="darkCells" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect x="3" y="3" width="18" height="18" rx="3" class="dark"/>
+    </pattern>
+    <pattern id="blueCells" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect x="3" y="3" width="18" height="18" rx="3" class="blue"/>
+    </pattern>
   </defs>
 
   <rect width="1200" height="300" fill="#ffffff"/>
@@ -24,79 +30,101 @@
   <g transform="translate(216 52)">
     <rect x="0" y="0" width="768" height="168" fill="url(#emptyCells)" opacity="0.78"/>
 
-    <g id="pieces">
-      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.92;0.95;0.985;1" dur="24s" repeatCount="indefinite"/>
+    <g id="landed-board">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.91;0.94;0.985;1" dur="28s" repeatCount="indefinite"/>
 
-      <g opacity="0" transform="translate(0 -72)">
-        <animate attributeName="opacity" values="1;1;1;1" keyTimes="0;0.13;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 -72;0 144;0 144;0 144" keyTimes="0;0.13;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="0" width="18" height="18" rx="3" class="dark"/><rect x="24" y="0" width="18" height="18" rx="3" class="dark"/><rect x="48" y="0" width="18" height="18" rx="3" class="dark"/><rect x="72" y="0" width="18" height="18" rx="3" class="dark"/>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.11;0.12;0.91;0.94" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="144" width="768" height="24" fill="url(#darkCells)"/>
+        <rect x="72" y="144" width="72" height="24" fill="url(#blueCells)"/>
+        <rect x="264" y="144" width="96" height="24" fill="url(#blueCells)"/>
+        <rect x="552" y="144" width="120" height="24" fill="url(#blueCells)"/>
       </g>
-
-      <g opacity="0" transform="translate(96 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.07;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="96 -72;96 -72;96 120;96 120;96 120" keyTimes="0;0.07;0.2;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="0" width="18" height="18" rx="3" class="blue"/><rect x="24" y="0" width="18" height="18" rx="3" class="blue"/><rect x="0" y="24" width="18" height="18" rx="3" class="blue"/><rect x="24" y="24" width="18" height="18" rx="3" class="blue"/>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.23;0.24;0.91;0.94" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="120" width="768" height="24" fill="url(#darkCells)"/>
+        <rect x="0" y="120" width="96" height="24" fill="url(#blueCells)"/>
+        <rect x="312" y="120" width="96" height="24" fill="url(#blueCells)"/>
+        <rect x="648" y="120" width="72" height="24" fill="url(#blueCells)"/>
       </g>
-
-      <g opacity="0" transform="translate(144 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.14;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="144 -72;144 -72;144 120;144 120;144 120" keyTimes="0;0.14;0.27;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="24" width="18" height="18" rx="3" class="dark"/><rect x="24" y="24" width="18" height="18" rx="3" class="dark"/><rect x="48" y="24" width="18" height="18" rx="3" class="dark"/><rect x="24" y="0" width="18" height="18" rx="3" class="dark"/>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.35;0.36;0.91;0.94" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="96" width="768" height="24" fill="url(#darkCells)"/>
+        <rect x="144" y="96" width="120" height="24" fill="url(#blueCells)"/>
+        <rect x="432" y="96" width="72" height="24" fill="url(#blueCells)"/>
+        <rect x="600" y="96" width="96" height="24" fill="url(#blueCells)"/>
       </g>
-
-      <g opacity="0" transform="translate(216 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.21;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="216 -72;216 -72;216 120;216 120;216 120" keyTimes="0;0.21;0.34;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="24" width="18" height="18" rx="3" class="blue"/><rect x="24" y="24" width="18" height="18" rx="3" class="blue"/><rect x="24" y="0" width="18" height="18" rx="3" class="blue"/><rect x="48" y="0" width="18" height="18" rx="3" class="blue"/>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.47;0.48;0.91;0.94" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="72" width="768" height="24" fill="url(#darkCells)"/>
+        <rect x="96" y="72" width="96" height="24" fill="url(#blueCells)"/>
+        <rect x="288" y="72" width="120" height="24" fill="url(#blueCells)"/>
+        <rect x="504" y="72" width="96" height="24" fill="url(#blueCells)"/>
       </g>
-
-      <g opacity="0" transform="translate(288 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.28;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="288 -72;288 -72;288 96;288 96;288 96" keyTimes="0;0.28;0.41;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="0" width="18" height="18" rx="3" class="dark"/><rect x="0" y="24" width="18" height="18" rx="3" class="dark"/><rect x="0" y="48" width="18" height="18" rx="3" class="dark"/><rect x="24" y="48" width="18" height="18" rx="3" class="dark"/>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.59;0.6;0.91;0.94" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="48" width="768" height="24" fill="url(#darkCells)"/>
+        <rect x="216" y="48" width="96" height="24" fill="url(#blueCells)"/>
+        <rect x="384" y="48" width="96" height="24" fill="url(#blueCells)"/>
+        <rect x="672" y="48" width="72" height="24" fill="url(#blueCells)"/>
       </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.71;0.72;0.91;0.94" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="24" width="768" height="24" fill="url(#darkCells)"/>
+        <rect x="48" y="24" width="120" height="24" fill="url(#blueCells)"/>
+        <rect x="336" y="24" width="72" height="24" fill="url(#blueCells)"/>
+        <rect x="528" y="24" width="96" height="24" fill="url(#blueCells)"/>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.83;0.84;0.91;0.94" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="768" height="24" fill="url(#darkCells)"/>
+        <rect x="168" y="0" width="120" height="24" fill="url(#blueCells)"/>
+        <rect x="456" y="0" width="96" height="24" fill="url(#blueCells)"/>
+        <rect x="648" y="0" width="96" height="24" fill="url(#blueCells)"/>
+      </g>
+    </g>
 
-      <g opacity="0" transform="translate(336 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.35;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="336 -72;336 -72;336 144;336 144;336 144" keyTimes="0;0.35;0.48;0.92;1" dur="24s" repeatCount="indefinite"/>
+    <g id="active-falling-piece">
+      <g opacity="0" transform="translate(72 -72)">
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.11;0.12;1" dur="28s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="72 -72;72 144;72 144;72 144" keyTimes="0;0.11;0.12;1" dur="28s" repeatCount="indefinite"/>
         <rect x="0" y="0" width="18" height="18" rx="3" class="blue"/><rect x="24" y="0" width="18" height="18" rx="3" class="blue"/><rect x="48" y="0" width="18" height="18" rx="3" class="blue"/><rect x="72" y="0" width="18" height="18" rx="3" class="blue"/>
       </g>
 
-      <g opacity="0" transform="translate(432 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.42;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="432 -72;432 -72;432 96;432 96;432 96" keyTimes="0;0.42;0.55;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="0" width="18" height="18" rx="3" class="dark"/><rect x="0" y="24" width="18" height="18" rx="3" class="dark"/><rect x="0" y="48" width="18" height="18" rx="3" class="dark"/><rect x="24" y="0" width="18" height="18" rx="3" class="dark"/>
-      </g>
-
-      <g opacity="0" transform="translate(480 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.49;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="480 -72;480 -72;480 120;480 120;480 120" keyTimes="0;0.49;0.62;0.92;1" dur="24s" repeatCount="indefinite"/>
+      <g opacity="0" transform="translate(312 -72)">
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.12;0.13;0.23;0.24;1" dur="28s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="312 -72;312 -72;312 120;312 120;312 120" keyTimes="0;0.12;0.23;0.24;1" dur="28s" repeatCount="indefinite"/>
         <rect x="0" y="0" width="18" height="18" rx="3" class="blue"/><rect x="24" y="0" width="18" height="18" rx="3" class="blue"/><rect x="0" y="24" width="18" height="18" rx="3" class="blue"/><rect x="24" y="24" width="18" height="18" rx="3" class="blue"/>
-      </g>
-
-      <g opacity="0" transform="translate(528 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.56;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="528 -72;528 -72;528 120;528 120;528 120" keyTimes="0;0.56;0.69;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="24" width="18" height="18" rx="3" class="dark"/><rect x="24" y="24" width="18" height="18" rx="3" class="dark"/><rect x="48" y="24" width="18" height="18" rx="3" class="dark"/><rect x="24" y="0" width="18" height="18" rx="3" class="dark"/>
       </g>
 
       <g opacity="0" transform="translate(600 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.63;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="600 -72;600 -72;600 72;600 72;600 72" keyTimes="0;0.63;0.76;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="0" width="18" height="18" rx="3" class="blue"/><rect x="0" y="24" width="18" height="18" rx="3" class="blue"/><rect x="0" y="48" width="18" height="18" rx="3" class="blue"/><rect x="0" y="72" width="18" height="18" rx="3" class="blue"/>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.24;0.25;0.35;0.36;1" dur="28s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="600 -72;600 -72;600 96;600 96;600 96" keyTimes="0;0.24;0.35;0.36;1" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="24" width="18" height="18" rx="3" class="blue"/><rect x="24" y="24" width="18" height="18" rx="3" class="blue"/><rect x="48" y="24" width="18" height="18" rx="3" class="blue"/><rect x="24" y="0" width="18" height="18" rx="3" class="blue"/>
+      </g>
+
+      <g opacity="0" transform="translate(288 -72)">
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.36;0.37;0.47;0.48;1" dur="28s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="288 -72;288 -72;288 72;288 72;288 72" keyTimes="0;0.36;0.47;0.48;1" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="24" width="18" height="18" rx="3" class="dark"/><rect x="24" y="24" width="18" height="18" rx="3" class="dark"/><rect x="24" y="0" width="18" height="18" rx="3" class="dark"/><rect x="48" y="0" width="18" height="18" rx="3" class="dark"/>
+      </g>
+
+      <g opacity="0" transform="translate(384 -72)">
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.48;0.49;0.59;0.6;1" dur="28s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="384 -72;384 -72;384 48;384 48;384 48" keyTimes="0;0.48;0.59;0.6;1" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="18" height="18" rx="3" class="blue"/><rect x="24" y="0" width="18" height="18" rx="3" class="blue"/><rect x="48" y="0" width="18" height="18" rx="3" class="blue"/><rect x="72" y="0" width="18" height="18" rx="3" class="blue"/>
+      </g>
+
+      <g opacity="0" transform="translate(528 -72)">
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6;0.61;0.71;0.72;1" dur="28s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="528 -72;528 -72;528 24;528 24;528 24" keyTimes="0;0.6;0.71;0.72;1" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="18" height="18" rx="3" class="blue"/><rect x="0" y="24" width="18" height="18" rx="3" class="blue"/><rect x="24" y="24" width="18" height="18" rx="3" class="blue"/><rect x="48" y="24" width="18" height="18" rx="3" class="blue"/>
       </g>
 
       <g opacity="0" transform="translate(648 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.7;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="648 -72;648 -72;648 144;648 144;648 144" keyTimes="0;0.7;0.83;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="0" width="18" height="18" rx="3" class="dark"/><rect x="24" y="0" width="18" height="18" rx="3" class="dark"/><rect x="48" y="0" width="18" height="18" rx="3" class="dark"/><rect x="72" y="0" width="18" height="18" rx="3" class="dark"/>
-      </g>
-
-      <g opacity="0" transform="translate(120 -72)">
-        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.77;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="120 -72;120 -72;120 72;120 72;120 72" keyTimes="0;0.77;0.9;0.92;1" dur="24s" repeatCount="indefinite"/>
-        <rect x="0" y="0" width="18" height="18" rx="3" class="blue"/><rect x="24" y="0" width="18" height="18" rx="3" class="blue"/><rect x="0" y="24" width="18" height="18" rx="3" class="blue"/><rect x="24" y="24" width="18" height="18" rx="3" class="blue"/>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.72;0.73;0.83;0.84;1" dur="28s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="648 -72;648 -72;648 0;648 0;648 0" keyTimes="0;0.72;0.83;0.84;1" dur="28s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="18" height="18" rx="3" class="blue"/><rect x="24" y="0" width="18" height="18" rx="3" class="blue"/><rect x="48" y="0" width="18" height="18" rx="3" class="blue"/><rect x="72" y="0" width="18" height="18" rx="3" class="blue"/>
       </g>
     </g>
   </g>
