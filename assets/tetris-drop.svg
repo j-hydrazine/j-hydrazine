@@ -1,0 +1,123 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Falling Tetris blocks</title>
+  <desc id="desc">An animated README banner with colorful Tetris-like blocks falling into a product build board.</desc>
+
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101827"/>
+      <stop offset="0.55" stop-color="#172a46"/>
+      <stop offset="1" stop-color="#0f1724"/>
+    </linearGradient>
+    <pattern id="boardGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#ffffff" stroke-opacity="0.06"/>
+    </pattern>
+    <filter id="blockGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .label { font-family: Inter, Segoe UI, Arial, sans-serif; fill: #ffffff; }
+      .mono { font-family: Consolas, Monaco, monospace; fill: #8dd7ff; }
+      .cell { width: 24px; height: 24px; rx: 5px; filter: url(#blockGlow); }
+      @media (prefers-reduced-motion: reduce) {
+        animate, animateTransform { display: none; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="18" fill="url(#panel)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#boardGrid)"/>
+
+  <text x="54" y="62" class="mono" font-size="13" font-weight="700" letter-spacing="4">BUILD QUEUE / PLAY MODE</text>
+  <text x="54" y="106" class="label" font-size="34" font-weight="800">Falling ideas into working systems</text>
+  <text x="54" y="139" class="label" font-size="17" opacity="0.78">AI agents, product taste, tiny experiments, and one block at a time.</text>
+
+  <g transform="translate(712 34)">
+    <rect x="0" y="0" width="400" height="288" rx="14" fill="#08111f" fill-opacity="0.62" stroke="#92c8ff" stroke-opacity="0.22"/>
+    <rect x="24" y="16" width="352" height="256" fill="url(#boardGrid)" opacity="0.9"/>
+
+    <g opacity="0.96">
+      <rect x="24" y="240" width="24" height="24" rx="5" fill="#2f6fc8"/>
+      <rect x="56" y="240" width="24" height="24" rx="5" fill="#2f6fc8"/>
+      <rect x="88" y="240" width="24" height="24" rx="5" fill="#39c0d6"/>
+      <rect x="120" y="240" width="24" height="24" rx="5" fill="#39c0d6"/>
+      <rect x="152" y="240" width="24" height="24" rx="5" fill="#8fd14f"/>
+      <rect x="184" y="240" width="24" height="24" rx="5" fill="#8fd14f"/>
+      <rect x="216" y="240" width="24" height="24" rx="5" fill="#f4b94a"/>
+      <rect x="248" y="240" width="24" height="24" rx="5" fill="#f4b94a"/>
+      <rect x="280" y="240" width="24" height="24" rx="5" fill="#f26d6d"/>
+      <rect x="312" y="240" width="24" height="24" rx="5" fill="#f26d6d"/>
+      <rect x="344" y="240" width="24" height="24" rx="5" fill="#a78bfa"/>
+
+      <rect x="24" y="208" width="24" height="24" rx="5" fill="#2f6fc8"/>
+      <rect x="56" y="208" width="24" height="24" rx="5" fill="#39c0d6"/>
+      <rect x="88" y="208" width="24" height="24" rx="5" fill="#39c0d6"/>
+      <rect x="152" y="208" width="24" height="24" rx="5" fill="#8fd14f"/>
+      <rect x="184" y="208" width="24" height="24" rx="5" fill="#f4b94a"/>
+      <rect x="216" y="208" width="24" height="24" rx="5" fill="#f4b94a"/>
+      <rect x="248" y="208" width="24" height="24" rx="5" fill="#a78bfa"/>
+      <rect x="280" y="208" width="24" height="24" rx="5" fill="#a78bfa"/>
+      <rect x="312" y="208" width="24" height="24" rx="5" fill="#a78bfa"/>
+    </g>
+
+    <g filter="url(#blockGlow)">
+      <g transform="translate(72 -76)">
+        <animateTransform attributeName="transform" type="translate" values="72 -76;72 112;72 112;72 -76" keyTimes="0;0.62;0.78;1" dur="4.8s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="24" height="24" rx="5" fill="#39c0d6"/>
+        <rect x="32" y="0" width="24" height="24" rx="5" fill="#39c0d6"/>
+        <rect x="0" y="32" width="24" height="24" rx="5" fill="#39c0d6"/>
+        <rect x="32" y="32" width="24" height="24" rx="5" fill="#39c0d6"/>
+      </g>
+
+      <g transform="translate(232 -138)">
+        <animateTransform attributeName="transform" type="translate" values="232 -138;232 80;232 80;232 -138" keyTimes="0;0.6;0.76;1" dur="5.6s" begin="0.8s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="24" height="24" rx="5" fill="#f4b94a"/>
+        <rect x="32" y="0" width="24" height="24" rx="5" fill="#f4b94a"/>
+        <rect x="64" y="0" width="24" height="24" rx="5" fill="#f4b94a"/>
+        <rect x="32" y="32" width="24" height="24" rx="5" fill="#f4b94a"/>
+      </g>
+
+      <g transform="translate(152 -108)">
+        <animateTransform attributeName="transform" type="translate" values="152 -108;152 48;184 48;184 -108" keyTimes="0;0.48;0.68;1" dur="5.2s" begin="1.7s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="24" height="24" rx="5" fill="#8fd14f"/>
+        <rect x="32" y="0" width="24" height="24" rx="5" fill="#8fd14f"/>
+        <rect x="32" y="32" width="24" height="24" rx="5" fill="#8fd14f"/>
+        <rect x="64" y="32" width="24" height="24" rx="5" fill="#8fd14f"/>
+      </g>
+
+      <g transform="translate(304 -92)">
+        <animateTransform attributeName="transform" type="translate" values="304 -92;304 144;304 144;304 -92" keyTimes="0;0.58;0.74;1" dur="4.9s" begin="2.3s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="24" height="24" rx="5" fill="#a78bfa"/>
+        <rect x="0" y="32" width="24" height="24" rx="5" fill="#a78bfa"/>
+        <rect x="0" y="64" width="24" height="24" rx="5" fill="#a78bfa"/>
+        <rect x="32" y="64" width="24" height="24" rx="5" fill="#a78bfa"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(54 194)" opacity="0.96">
+    <rect x="0" y="0" width="92" height="26" rx="6" fill="#2f6fc8"/>
+    <rect x="108" y="0" width="92" height="26" rx="6" fill="#39c0d6"/>
+    <rect x="216" y="0" width="92" height="26" rx="6" fill="#8fd14f"/>
+    <rect x="324" y="0" width="92" height="26" rx="6" fill="#f4b94a"/>
+    <text x="18" y="18" class="label" font-size="12" font-weight="700">IDEA</text>
+    <text x="124" y="18" class="label" font-size="12" font-weight="700">BUILD</text>
+    <text x="231" y="18" class="label" font-size="12" font-weight="700">TEST</text>
+    <text x="338" y="18" class="label" font-size="12" font-weight="700">SHIP</text>
+  </g>
+
+  <path d="M54 270H490" stroke="#8dd7ff" stroke-opacity="0.32" stroke-width="2"/>
+  <circle cx="54" cy="270" r="4" fill="#8dd7ff"/>
+  <circle cx="199" cy="270" r="4" fill="#8dd7ff">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="344" cy="270" r="4" fill="#8dd7ff">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" begin="0.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="490" cy="270" r="4" fill="#8dd7ff">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

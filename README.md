@@ -46,6 +46,14 @@ I care about clear interfaces, practical automation, and ideas that can actually
 
 ---
 
+## Build Mode
+
+<p align="center">
+  <img src="./assets/tetris-drop.svg" alt="animated falling blocks build board" width="100%" />
+</p>
+
+---
+
 ## GitHub Activity
 
 <p align="center">
