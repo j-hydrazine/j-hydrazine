@@ -1,23 +1,37 @@
 <svg width="1200" height="240" viewBox="0 0 1200 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">j-hydrazine profile banner</title>
-  <desc id="desc">A dark blue animated technical banner with grid lines, orbit rings, and the text Hey, I'm j-hydrazine.</desc>
+  <desc id="desc">A dark technical profile banner with grid lines, layered folder tabs on the right, and the text Hey, I'm j-hydrazine.</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="240" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#0a111d"/>
-      <stop offset="0.52" stop-color="#193153"/>
-      <stop offset="1" stop-color="#4e9ae8"/>
+      <stop offset="0.58" stop-color="#17263d"/>
+      <stop offset="1" stop-color="#223f64"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1082 118) rotate(90) scale(84)">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
-      <stop offset="0.18" stop-color="#9ed4ff" stop-opacity="0.8"/>
-      <stop offset="1" stop-color="#4e9ae8" stop-opacity="0"/>
+    <radialGradient id="vignette" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1020 112) rotate(90) scale(142 240)">
+      <stop offset="0" stop-color="#8dd7ff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#8dd7ff" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="folderBack" x1="0" y1="0" x2="460" y2="132" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#355a84"/>
+      <stop offset="1" stop-color="#1c314d"/>
+    </linearGradient>
+    <linearGradient id="folderMid" x1="0" y1="0" x2="480" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4d78a6"/>
+      <stop offset="1" stop-color="#243f61"/>
+    </linearGradient>
+    <linearGradient id="folderFront" x1="0" y1="0" x2="520" y2="168" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6fa8d8"/>
+      <stop offset="1" stop-color="#31577d"/>
+    </linearGradient>
     <pattern id="grid" width="120" height="80" patternUnits="userSpaceOnUse">
       <path d="M120 0H0V80" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
-    <filter id="softGlow" x="-40" y="-40" width="80" height="80" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+    <filter id="folderShadow" x="-20%" y="-30%" width="140%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#020713" flood-opacity="0.32"/>
+    </filter>
+    <filter id="tabGlow" x="-20%" y="-40%" width="140%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -27,8 +41,8 @@
 
   <rect x="0" y="0" width="1200" height="240" rx="16" fill="url(#bg)"/>
   <rect x="0" y="0" width="1200" height="240" rx="16" fill="url(#grid)"/>
-  <rect x="0" y="0" width="1200" height="240" rx="16" fill="url(#glow)" opacity="0.7">
-    <animate attributeName="opacity" values="0.45;0.85;0.45" dur="4s" repeatCount="indefinite"/>
+  <rect x="0" y="0" width="1200" height="240" rx="16" fill="url(#vignette)" opacity="0.9">
+    <animate attributeName="opacity" values="0.55;0.9;0.55" dur="5s" repeatCount="indefinite"/>
   </rect>
 
   <g opacity="0.9">
@@ -38,32 +52,26 @@
     <text x="68" y="198" fill="#75ccff" font-family="Consolas, Monaco, monospace" font-size="12">ideas -&gt; systems -&gt; experiments -&gt; iteration</text>
   </g>
 
-  <g transform="translate(1080 118)">
-    <circle r="66" stroke="#b7ddff" stroke-opacity="0.16"/>
-    <circle r="45" stroke="#b7ddff" stroke-opacity="0.18"/>
-    <circle r="20" stroke="#b7ddff" stroke-opacity="0.16"/>
-    <circle r="4" fill="#ffffff" filter="url(#softGlow)">
-      <animate attributeName="r" values="3;5;3" dur="2.8s" repeatCount="indefinite"/>
-    </circle>
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite"/>
-      <circle cx="66" cy="0" r="3" fill="#9ed4ff"/>
-    </g>
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="140" to="500" dur="13s" repeatCount="indefinite"/>
-      <circle cx="45" cy="0" r="2.5" fill="#ffffff" opacity="0.75"/>
-    </g>
-  </g>
+  <g transform="translate(740 34)" filter="url(#folderShadow)">
+    <path d="M54 20C54 10 62 4 72 4H190C205 4 212 14 218 26L226 42H424C439 42 450 53 450 68V104H20V54C20 35 35 20 54 20Z" fill="url(#folderBack)" opacity="0.64"/>
+    <path d="M20 78H450V130C450 147 437 160 420 160H48C32 160 20 148 20 132V78Z" fill="url(#folderBack)" opacity="0.5"/>
 
-  <g opacity="0.42">
-    <circle cx="980" cy="62" r="2.6" fill="#b7ddff">
-      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="900" cy="176" r="2" fill="#8dd7ff">
-      <animate attributeName="opacity" values="0.15;0.7;0.15" dur="4.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1118" cy="48" r="2" fill="#ffffff">
-      <animate attributeName="opacity" values="0.2;0.85;0.2" dur="5.2s" repeatCount="indefinite"/>
-    </circle>
+    <g transform="translate(-24 34)">
+      <path d="M54 22C54 12 62 6 72 6H212C227 6 235 16 241 29L250 48H456C472 48 484 60 484 76V122H14V58C14 38 31 22 54 22Z" fill="url(#folderMid)" opacity="0.82"/>
+      <path d="M14 90H484V154C484 172 470 186 452 186H48C28 186 14 172 14 154V90Z" fill="url(#folderMid)" opacity="0.72"/>
+    </g>
+
+    <g transform="translate(18 82)">
+      <path d="M62 18C62 8 70 2 80 2H224C239 2 248 12 254 26L264 48H482C498 48 510 60 510 76V138H14V62C14 38 34 18 62 18Z" fill="url(#folderFront)"/>
+      <path d="M14 102H510V142C510 162 494 178 474 178H50C30 178 14 162 14 142V102Z" fill="url(#folderFront)"/>
+      <rect x="84" y="98" width="128" height="34" rx="9" fill="#0b111c" opacity="0.86"/>
+      <text x="107" y="121" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="800">this. works</text>
+    </g>
+
+    <g opacity="0.42" filter="url(#tabGlow)">
+      <rect x="80" y="24" width="128" height="6" rx="3" fill="#b7ddff"/>
+      <rect x="222" y="74" width="150" height="6" rx="3" fill="#b7ddff"/>
+      <rect x="360" y="134" width="104" height="6" rx="3" fill="#b7ddff"/>
+    </g>
   </g>
 </svg>
