@@ -44,6 +44,11 @@
       <path d="M0 6H18M0 15H18" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
       <path d="M4 0V18M14 0V18" stroke="#081424" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
+    <filter id="paperGrain" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="3" seed="17" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.72 0 0 0 0 0.82 0 0 0 0 0.94 0 0 0 0.18 0" result="grain"/>
+      <feBlend in="SourceGraphic" in2="grain" mode="overlay"/>
+    </filter>
     <filter id="folderShadow" x="-20%" y="-30%" width="140%" height="170%" color-interpolation-filters="sRGB">
       <feDropShadow dx="-10" dy="18" stdDeviation="14" flood-color="#020713" flood-opacity="0.38"/>
       <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#b7ddff" flood-opacity="0.16"/>
@@ -70,22 +75,22 @@
     <text x="68" y="198" fill="#75ccff" font-family="Consolas, Monaco, monospace" font-size="12">ideas -&gt; systems -&gt; experiments -&gt; iteration</text>
   </g>
 
-  <g transform="translate(1110 32) rotate(90) scale(0.39)" filter="url(#folderShadow)">
-    <path d="M54 20C54 10 62 4 72 4H190C205 4 212 14 218 26L226 42H424C439 42 450 53 450 68V104H20V54C20 35 35 20 54 20Z" fill="url(#folderBack)" opacity="0.64"/>
-    <path d="M20 78H450V130C450 147 437 160 420 160H48C32 160 20 148 20 132V78Z" fill="url(#folderBack)" opacity="0.5"/>
+  <g transform="translate(1116 224) rotate(270) scale(0.39)" filter="url(#folderShadow)">
+    <path d="M54 20C54 10 62 4 72 4H190C205 4 212 14 218 26L226 42H424C439 42 450 53 450 68V104H20V54C20 35 35 20 54 20Z" fill="url(#folderBack)" opacity="0.64" filter="url(#paperGrain)"/>
+    <path d="M20 78H450V130C450 147 437 160 420 160H48C32 160 20 148 20 132V78Z" fill="url(#folderBack)" opacity="0.5" filter="url(#paperGrain)"/>
     <path d="M54 20C54 10 62 4 72 4H190C205 4 212 14 218 26L226 42H424C439 42 450 53 450 68V104H20V54C20 35 35 20 54 20Z" fill="url(#folderTexture)" opacity="0.55"/>
     <path d="M28 83H440" stroke="url(#folderEdge)" stroke-width="2" opacity="0.65"/>
 
     <g transform="translate(-24 34)">
-      <path d="M54 22C54 12 62 6 72 6H212C227 6 235 16 241 29L250 48H456C472 48 484 60 484 76V122H14V58C14 38 31 22 54 22Z" fill="url(#folderMid)" opacity="0.82"/>
-      <path d="M14 90H484V154C484 172 470 186 452 186H48C28 186 14 172 14 154V90Z" fill="url(#folderMid)" opacity="0.72"/>
+      <path d="M54 22C54 12 62 6 72 6H212C227 6 235 16 241 29L250 48H456C472 48 484 60 484 76V122H14V58C14 38 31 22 54 22Z" fill="url(#folderMid)" opacity="0.82" filter="url(#paperGrain)"/>
+      <path d="M14 90H484V154C484 172 470 186 452 186H48C28 186 14 172 14 154V90Z" fill="url(#folderMid)" opacity="0.72" filter="url(#paperGrain)"/>
       <path d="M54 22C54 12 62 6 72 6H212C227 6 235 16 241 29L250 48H456C472 48 484 60 484 76V122H14V58C14 38 31 22 54 22Z" fill="url(#folderTexture)" opacity="0.5"/>
       <path d="M30 95H468" stroke="url(#folderEdge)" stroke-width="2" opacity="0.68"/>
     </g>
 
     <g transform="translate(18 82)">
-      <path d="M62 18C62 8 70 2 80 2H224C239 2 248 12 254 26L264 48H482C498 48 510 60 510 76V138H14V62C14 38 34 18 62 18Z" fill="url(#folderFront)"/>
-      <path d="M14 102H510V142C510 162 494 178 474 178H50C30 178 14 162 14 142V102Z" fill="url(#folderFront)"/>
+      <path d="M62 18C62 8 70 2 80 2H224C239 2 248 12 254 26L264 48H482C498 48 510 60 510 76V138H14V62C14 38 34 18 62 18Z" fill="url(#folderFront)" filter="url(#paperGrain)"/>
+      <path d="M14 102H510V142C510 162 494 178 474 178H50C30 178 14 162 14 142V102Z" fill="url(#folderFront)" filter="url(#paperGrain)"/>
       <path d="M62 18C62 8 70 2 80 2H224C239 2 248 12 254 26L264 48H482C498 48 510 60 510 76V138H14V62C14 38 34 18 62 18Z" fill="url(#folderSheen)"/>
       <path d="M14 102H510V142C510 162 494 178 474 178H50C30 178 14 162 14 142V102Z" fill="url(#folderTexture)" opacity="0.42"/>
       <path d="M32 106H494" stroke="url(#folderEdge)" stroke-width="2" opacity="0.72"/>
