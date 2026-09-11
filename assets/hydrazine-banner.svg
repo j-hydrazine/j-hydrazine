@@ -1,69 +1,109 @@
-<svg width="1200" height="240" viewBox="0 0 1200 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">j-hydrazine profile banner</title>
-  <desc id="desc">A dark blue animated technical banner with grid lines, orbit rings, and the text Hey, I'm j-hydrazine.</desc>
+<svg width="1200" height="260" viewBox="0 0 1200 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">j-hydrazine hand drawn puppy banner</title>
+  <desc id="desc">A playful hand-drawn puppy doodle banner with the text Hey, I'm j-hydrazine.</desc>
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="240" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0a111d"/>
-      <stop offset="0.52" stop-color="#193153"/>
-      <stop offset="1" stop-color="#4e9ae8"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1082 118) rotate(90) scale(84)">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
-      <stop offset="0.18" stop-color="#9ed4ff" stop-opacity="0.8"/>
-      <stop offset="1" stop-color="#4e9ae8" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="120" height="80" patternUnits="userSpaceOnUse">
-      <path d="M120 0H0V80" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
-    </pattern>
-    <filter id="softGlow" x="-40" y="-40" width="80" height="80" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <style>
+      .ink { stroke:#1f1f27; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+      .thin { stroke:#1f1f27; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+      .blue { stroke:#5eb9c7; }
+      .orange { stroke:#d95d1f; }
+      .gold { stroke:#e7b847; }
+      .fill-blue { fill:#5eb9c7; }
+      .fill-orange { fill:#d95d1f; }
+      .fill-gold { fill:#e7b847; }
+      .text { fill:#1f1f27; font-family:"Comic Sans MS","Trebuchet MS",Arial,sans-serif; }
+      .mono { fill:#275b9f; font-family:Consolas,Monaco,monospace; }
+      @media (prefers-reduced-motion: reduce) {
+        animate, animateTransform { display:none; }
+      }
+    </style>
   </defs>
 
-  <rect x="0" y="0" width="1200" height="240" rx="16" fill="url(#bg)"/>
-  <rect x="0" y="0" width="1200" height="240" rx="16" fill="url(#grid)"/>
-  <rect x="0" y="0" width="1200" height="240" rx="16" fill="url(#glow)" opacity="0.7">
-    <animate attributeName="opacity" values="0.45;0.85;0.45" dur="4s" repeatCount="indefinite"/>
-  </rect>
+  <rect width="1200" height="260" rx="18" fill="#fffdf8"/>
+  <path d="M20 24C220 12 410 29 594 18C777 7 975 19 1180 14" stroke="#e8edf2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 236C210 245 408 230 590 241C782 253 966 235 1178 244" stroke="#e8edf2" stroke-width="4" stroke-linecap="round"/>
 
-  <g opacity="0.9">
-    <text x="68" y="58" fill="#8dd7ff" font-family="Consolas, Monaco, monospace" font-size="13" font-weight="700" letter-spacing="4">J-HYDRAZINE / 03</text>
-    <text x="68" y="126" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="45" font-weight="800">Hey, I'm j-hydrazine.</text>
-    <text x="68" y="162" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">Building AI tools, product systems, and useful little machines.</text>
-    <text x="68" y="198" fill="#75ccff" font-family="Consolas, Monaco, monospace" font-size="12">ideas -&gt; systems -&gt; experiments -&gt; iteration</text>
+  <g transform="translate(72 62)">
+    <text x="0" y="0" class="mono" font-size="13" font-weight="700" letter-spacing="4">J-HYDRAZINE / 03</text>
+    <text x="0" y="62" class="text" font-size="44" font-weight="800">Hey, I'm j-hydrazine.</text>
+    <text x="2" y="100" class="text" font-size="18">Building AI tools, product systems, and useful little machines.</text>
+    <text x="2" y="135" class="mono" font-size="12">ideas -&gt; systems -&gt; experiments -&gt; iteration</text>
   </g>
 
-  <g transform="translate(1080 118)">
-    <circle r="66" stroke="#b7ddff" stroke-opacity="0.16"/>
-    <circle r="45" stroke="#b7ddff" stroke-opacity="0.18"/>
-    <circle r="20" stroke="#b7ddff" stroke-opacity="0.16"/>
-    <circle r="4" fill="#ffffff" filter="url(#softGlow)">
-      <animate attributeName="r" values="3;5;3" dur="2.8s" repeatCount="indefinite"/>
-    </circle>
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite"/>
-      <circle cx="66" cy="0" r="3" fill="#9ed4ff"/>
-    </g>
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="140" to="500" dur="13s" repeatCount="indefinite"/>
-      <circle cx="45" cy="0" r="2.5" fill="#ffffff" opacity="0.75"/>
-    </g>
+  <g transform="translate(802 56)">
+    <animateTransform attributeName="transform" type="translate" values="802 56;802 52;802 56" dur="3.2s" repeatCount="indefinite"/>
+    <path d="M80 118C54 119 31 109 25 88C19 67 35 44 59 43C77 42 88 51 96 64C105 48 121 39 140 43C165 48 177 71 170 94C164 115 141 124 115 120L80 118Z" class="ink"/>
+    <path d="M47 49C42 28 54 17 70 36" class="ink"/>
+    <path d="M142 47C156 26 173 34 164 57" class="ink"/>
+    <path d="M67 78L67 79" class="ink"/>
+    <path d="M126 78L126 79" class="ink"/>
+    <path d="M92 89C99 95 106 95 113 89" class="thin"/>
+    <path d="M101 85C102 89 102 92 102 96" class="thin"/>
+    <path d="M55 122C46 142 34 157 16 168" class="ink"/>
+    <path d="M117 122C120 145 132 160 154 169" class="ink"/>
+    <path d="M69 136C85 146 104 147 122 137" class="thin blue"/>
+    <path d="M51 36C38 24 29 20 20 22" class="thin orange"/>
+    <path d="M157 59C184 54 203 62 216 82" class="thin gold"/>
   </g>
 
-  <g opacity="0.42">
-    <circle cx="980" cy="62" r="2.6" fill="#b7ddff">
-      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="900" cy="176" r="2" fill="#8dd7ff">
-      <animate attributeName="opacity" values="0.15;0.7;0.15" dur="4.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1118" cy="48" r="2" fill="#ffffff">
-      <animate attributeName="opacity" values="0.2;0.85;0.2" dur="5.2s" repeatCount="indefinite"/>
-    </circle>
+  <g transform="translate(656 46)">
+    <animateTransform attributeName="transform" type="rotate" values="-4 62 54;5 62 54;-4 62 54" dur="4s" repeatCount="indefinite"/>
+    <path d="M16 74C24 37 61 25 97 36C132 47 146 75 133 101C121 126 83 135 48 124C26 117 10 98 16 74Z" class="thin"/>
+    <path d="M48 37C42 16 54 8 69 28" class="thin"/>
+    <path d="M100 37C118 18 132 30 119 51" class="thin"/>
+    <path d="M50 74L50 75" class="ink"/>
+    <path d="M96 74L96 75" class="ink"/>
+    <path d="M68 91C76 98 85 98 92 91" class="thin"/>
+    <path d="M35 119C25 132 14 142 0 147" class="thin"/>
+    <path d="M113 123C121 138 134 147 151 151" class="thin"/>
+    <path d="M53 127C52 141 52 152 48 164" class="thin"/>
+    <path d="M96 130C101 143 105 154 107 166" class="thin"/>
+    <path d="M33 60C47 52 69 51 91 57" class="thin gold"/>
+    <path d="M31 76C50 67 80 68 112 78" class="thin gold"/>
+    <path d="M32 92C56 83 91 85 124 98" class="thin gold"/>
   </g>
+
+  <g transform="translate(1010 138)">
+    <path d="M8 42C21 20 48 14 75 24C105 35 116 62 103 84C90 106 54 109 26 94C8 84 0 61 8 42Z" class="thin"/>
+    <path d="M28 26C21 9 31 1 44 18" class="thin"/>
+    <path d="M76 26C91 10 102 21 91 39" class="thin"/>
+    <path d="M40 56L40 57" class="thin"/>
+    <path d="M74 57L74 58" class="thin"/>
+    <path d="M50 71C57 76 64 76 70 71" class="thin"/>
+    <path d="M24 94C18 105 12 113 3 120" class="thin orange"/>
+    <path d="M86 92C93 103 101 111 113 116" class="thin orange"/>
+    <path d="M25 35C52 28 75 32 97 47" class="thin blue"/>
+  </g>
+
+  <g transform="translate(562 172)">
+    <path d="M0 15C16 2 35 2 52 17" class="thin orange"/>
+    <path d="M25 0C22 18 17 29 7 38" class="thin orange"/>
+    <path d="M26 1C33 19 42 30 55 38" class="thin orange"/>
+  </g>
+
+  <g transform="translate(1016 48)">
+    <path d="M7 22C24 11 37 13 45 28C52 42 46 57 31 62C16 67 4 55 5 39" class="thin"/>
+    <path d="M46 28C66 18 82 22 93 39" class="thin"/>
+    <path d="M88 16C94 25 95 34 93 39" class="thin"/>
+  </g>
+
+  <g class="text" font-size="24" font-weight="800" transform="translate(694 188) rotate(-7)">
+    <text>puppy mode</text>
+  </g>
+
+  <g transform="translate(109 177) rotate(-10)">
+    <path d="M0 0C8 7 15 7 22 0" class="thin"/>
+    <path d="M56 4C64 11 72 11 80 4" class="thin"/>
+  </g>
+
+  <circle cx="604" cy="65" r="5" class="fill-gold">
+    <animate attributeName="cy" values="65;60;65" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1124" cy="108" r="4" class="fill-blue">
+    <animate attributeName="cy" values="108;103;108" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="760" cy="36" r="4" class="fill-orange">
+    <animate attributeName="cy" values="36;31;36" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
 </svg>
