@@ -49,11 +49,7 @@ I care about clear interfaces, practical automation, and ideas that can actually
 ## GitHub Activity
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/j-hydrazine/j-hydrazine/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/j-hydrazine/j-hydrazine/output/github-snake.svg" />
-    <img src="https://raw.githubusercontent.com/j-hydrazine/j-hydrazine/output/github-snake.svg" alt="GitHub contribution snake" width="100%" />
-  </picture>
+  <img src="./assets/github-snake.svg" alt="GitHub contribution snake" width="100%" />
 </p>
 
 ---
