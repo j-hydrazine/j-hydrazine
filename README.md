@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hydrazine-banner-space-dog-blue-muted.png" alt="j-hydrazine — a cute big-headed dachshund astronaut flying through a muted blue cubist cosmos" width="100%" />
+  <img src="./assets/hydrazine-banner-space-dog-compact.png" alt="j-hydrazine — a cute big-headed dachshund astronaut flying through a muted blue cubist cosmos" width="100%" />
 </p>
 
 <p align="center">
