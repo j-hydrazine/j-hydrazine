@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hydrazine-banner-smiling-dachshund.png" alt="j-hydrazine — striped terminal typography and a big-eyed smiling electronic dachshund on a charcoal grid" width="100%" />
+  <img src="./assets/hydrazine-banner-striped-eye-dachshund.png" alt="j-hydrazine — striped terminal typography and a smiling electronic dachshund with a segmented scanline eye" width="100%" />
 </p>
 
 <p align="center">
