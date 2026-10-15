@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hydrazine-banner-terminal.png" alt="j-hydrazine — striped terminal typography and a dachshund astronaut on a charcoal grid" width="100%" />
+  <img src="./assets/hydrazine-banner-electronic-puppy.png" alt="j-hydrazine — striped terminal typography and a seated electronic puppy on a charcoal grid" width="100%" />
 </p>
 
 <p align="center">
